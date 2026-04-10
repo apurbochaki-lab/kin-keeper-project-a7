@@ -1,7 +1,8 @@
+import CheckIn from "@/components/details-page/CheckIn";
 import Image from "next/image";
-import { FiVideo } from "react-icons/fi";
-import { LuMessageSquareMore } from "react-icons/lu";
-import { PiPhoneCallBold } from "react-icons/pi";
+// import { FiVideo } from "react-icons/fi";
+// import { LuMessageSquareMore } from "react-icons/lu";
+// import { PiPhoneCallBold } from "react-icons/pi";
 import { RiArchiveLine, RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
 
 const page = async ({ params }) => {
@@ -16,7 +17,7 @@ const page = async ({ params }) => {
     // console.log(friendDetails)
 
     const details = friendDetails.find(detail => detail.id === Number(frndId))
-    const { picture, name, status, tags, days_since_contact, goal, next_due_date, position, type } = details;
+    const {id, picture, name, status, tags, days_since_contact, goal, next_due_date, position, type } = details;
     // console.log(details)
 
     return (
@@ -85,7 +86,7 @@ const page = async ({ params }) => {
                         <button className="btn">Edit</button>
                     </div>
 
-                    <div className="mt-5 bg-white p-5 rounded-lg shadow-sm ">
+                    {/* <div className="mt-5 bg-white p-5 rounded-lg shadow-sm ">
                         <h2 className="text-xl font-bold text-black/60 py-5">Quick Check-In</h2>
                         <div className="grid grid-cols-3 gap-7">
                             <button className=" btn h-30 bg-[#F8FAFC] p-6 rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.10)]  text-center flex justify-center items-center">
@@ -107,7 +108,9 @@ const page = async ({ params }) => {
                                 </span>
                             </button>
                         </div>
-                    </div>
+                    </div> */}
+
+                    <CheckIn name={name} id={id}></CheckIn>
                 </div>
             </div>
         </section>

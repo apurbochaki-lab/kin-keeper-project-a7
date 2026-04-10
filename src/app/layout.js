@@ -2,6 +2,7 @@ import { Geist } from 'next/font/google'
 import "./globals.css";
 import Navbar from '@/components/common-parts/Navbar/Navbar';
 import Footer from '@/components/common-parts/Footer';
+import CheckInProvider from '@/context/CheckInProvider';
 
 
 const geist = Geist({
@@ -22,7 +23,9 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <Navbar></Navbar>
-        {children}
+        <CheckInProvider>
+          {children}
+        </CheckInProvider>
         <Footer></Footer>
       </body>
     </html>
