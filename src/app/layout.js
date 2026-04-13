@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       className={`${geist.className} h-full antialiased`}
       data-theme="light"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <Navbar></Navbar>
         {children}
         <Footer></Footer>
