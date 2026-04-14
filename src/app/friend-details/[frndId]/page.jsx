@@ -8,10 +8,10 @@ const page = async ({ params }) => {
     const { frndId } = await params;
     // console.log(frndId)
 
-    const res = await fetch("http://localhost:3000/data.json", {
-        cache: "no-store"
-    })
-    // const res = await fetch("https://kin-keeper-project-a7.vercel.app/data.json")
+    // const res = await fetch("http://localhost:3000/data.json", {
+    //     cache: "no-store"
+    // })
+    const res = await fetch("https://kin-keeper-project-a7.vercel.app/data.json")
     const friendDetails = await res.json();
     // console.log(friendDetails)
 
