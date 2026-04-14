@@ -12,7 +12,9 @@
         ],
         "bio": "Met in university. Love hiking together.",
         "goal": 14,
-        "next_due_date": "2025-07-20"
+        "next_due_date": "2025-07-20",
+        "position": "College friend, adventure partner",
+        "type": "email"
     },
     {
         "id": 2,
@@ -27,7 +29,9 @@
         ],
         "bio": "Works in the same team. Very supportive.",
         "goal": 10,
-        "next_due_date": "2025-07-18"
+        "next_due_date": "2025-07-18",
+        "position": "Team member, daily collaborator",
+        "type": "slack"
     },
     {
         "id": 3,
@@ -42,7 +46,9 @@
         ],
         "bio": "Gym partner. Motivates me daily.",
         "goal": 10,
-        "next_due_date": "2025-07-15"
+        "next_due_date": "2025-07-15",
+        "position": "Gym buddy, fitness motivator",
+        "type": "call"
     },
     {
         "id": 4,
@@ -57,7 +63,9 @@
         ],
         "bio": "My cousin. We used to travel together.",
         "goal": 15,
-        "next_due_date": "2025-07-10"
+        "next_due_date": "2025-07-10",
+        "position": "Family member, travel companion",
+        "type": "phone"
     },
     {
         "id": 5,
@@ -72,7 +80,9 @@
         ],
         "bio": "Important client for freelance work.",
         "goal": 7,
-        "next_due_date": "2025-07-17"
+        "next_due_date": "2025-07-17",
+        "position": "Business client, key contact",
+        "type": "email"
     },
     {
         "id": 6,
@@ -87,7 +97,9 @@
         ],
         "bio": "School friend. We chat occasionally.",
         "goal": 12,
-        "next_due_date": "2025-07-16"
+        "next_due_date": "2025-07-16",
+        "position": "School friend, casual chatter",
+        "type": "messenger"
     },
     {
         "id": 7,
@@ -102,7 +114,9 @@
         ],
         "bio": "Travel buddy from last trip.",
         "goal": 14,
-        "next_due_date": "2025-07-12"
+        "next_due_date": "2025-07-12",
+        "position": "Travel partner, explorer friend",
+        "type": "call"
     },
     {
         "id": 8,
@@ -116,7 +130,9 @@
         ],
         "bio": "Lives next door. Very friendly.",
         "goal": 10,
-        "next_due_date": "2025-07-19"
+        "next_due_date": "2025-07-19",
+        "position": "Neighbor, friendly connection",
+        "type": "in-person"
     },
     {
         "id": 9,
@@ -131,7 +147,9 @@
         ],
         "bio": "Working together on a startup idea.",
         "goal": 14,
-        "next_due_date": "2025-07-14"
+        "next_due_date": "2025-07-14",
+        "position": "Startup partner, co-founder",
+        "type": "zoom"
     },
     {
         "id": 10,
@@ -146,7 +164,9 @@
         ],
         "bio": "Met online. Shares same interests.",
         "goal": 7,
-        "next_due_date": "2025-07-18"
+        "next_due_date": "2025-07-18",
+        "position": "Online friend, shared interests",
+        "type": "dm"
     },
     {
         "id": 11,
@@ -160,7 +180,9 @@
         ],
         "bio": "Guides me in career decisions.",
         "goal": 15,
-        "next_due_date": "2025-07-11"
+        "next_due_date": "2025-07-11",
+        "position": "Career mentor, trusted guide",
+        "type": "email"
     },
     {
         "id": 12,
@@ -175,6 +197,8 @@
         ],
         "bio": "Works in design team. Creative thinker.",
         "goal": 10,
-        "next_due_date": "2025-07-15"
+        "next_due_date": "2025-07-15",
+        "position": "Design colleague, creative mind",
+        "type": "slack"
     }
 ]

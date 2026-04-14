@@ -1,7 +1,9 @@
 import Friend from "./Friend";
 
 const Friends = async() => {
-    // const res = await fetch("http://localhost:3000/data.json")
+    // const res = await fetch("http://localhost:3000/data.json", {
+    //     cache: "no-store"
+    // })
     const res = await fetch("https://kin-keeper-project-a7.vercel.app/data.json")
     const friends = await res.json();
     // console.log(friends)

@@ -3,6 +3,9 @@ import { FaPlus } from "react-icons/fa";
 
 export default function Home() {
   return (
+    // <div className="text-4xl font-bold text-center py-10">
+    //     Root Page
+    // </div>
     <section className="mt-10 container mx-auto">
       {/* Header Part */}
       <div className="text-center space-y-4">
@@ -16,7 +19,7 @@ export default function Home() {
       <section className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
         <div className="bg-white p-6 h-40 rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.10)]  text-center flex justify-center items-center">
           <span>
-            <h2 className="text-3xl font-bold mb-3">10</h2>
+            <h2 className="text-3xl font-bold mb-3">12</h2>
             <h2 className="font-semibold text-black/50">Total Friends</h2>
           </span>
         </div>

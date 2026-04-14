@@ -2,6 +2,7 @@ import insta from '@/assets/instagram.png';
 import facebook from '@/assets/facebook.png';
 import twitter from '@/assets/twitter.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -15,9 +16,9 @@ const Footer = () => {
                 <div className='mt-5 text-center mb-10'>
                     <h2 className='text-lg font-semibold'>Social Links</h2>
                     <div className='mt-3 flex items-center justify-center gap-4'>
-                        <Image src={insta} width={40} height={40} alt='Instagram Logo'></Image>
-                        <Image src={facebook} width={40} height={40} alt='facebook Logo'></Image>
-                        <Image src={twitter} width={40} height={40} alt='twitter Logo'></Image>
+                        <Link href={"https://instagram.com"}><Image src={insta} width={40} height={40} alt='Instagram Logo'></Image></Link>
+                        <Link href={"https://facebook.com"}><Image src={facebook} width={40} height={40} alt='facebook Logo'></Image></Link>
+                        <Link href={"https://x.com"}><Image src={twitter} width={40} height={40} alt='twitter Logo'></Image></Link>
                     </div>
                 </div>
 
