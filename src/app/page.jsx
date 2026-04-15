@@ -1,11 +1,9 @@
 import Friends from "@/components/Friends-Section/Friends";
+import { Suspense } from "react";
 import { FaPlus } from "react-icons/fa";
 
 export default function Home() {
   return (
-    // <div className="text-4xl font-bold text-center py-10">
-    //     Root Page
-    // </div>
     <section className="mt-10 container mx-auto">
       {/* Header Part */}
       <div className="text-center space-y-4">
@@ -41,12 +39,14 @@ export default function Home() {
             <h2 className="font-semibold text-black/50">Interactions This Month</h2>
           </span>
         </div>
-        
+
 
       </section>
 
       {/* Your Friends Section */}
-      <Friends></Friends>
+      <Suspense fallback={<span className="loading loading-xl loading-spinner text-success flex justify-center mx-auto h-[30vh]"></span> }>
+        <Friends></Friends>
+      </Suspense>
     </section>
   );
 }

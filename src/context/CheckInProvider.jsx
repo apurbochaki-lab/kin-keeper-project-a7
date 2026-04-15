@@ -7,13 +7,18 @@ const CheckInProvider = ({ children }) => {
     const [text, setText] = useState([])
     const [video, setVideo] = useState([])
 
+    const [timelineData, setTimelineData] = useState([])
+    console.log(timelineData.length)
+
     const data = {
         call,
         text,
         video,
         setCall,
         setText,
-        setVideo
+        setVideo,
+        timelineData,
+        setTimelineData
     };
 
     return (

@@ -1,14 +1,14 @@
 "use client";
 import { CheckInContext } from "@/context/CheckInContext";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import callImg from '@/assets/call.png'
 import textImg from '@/assets/text.png'
 import videoImg from '@/assets/video.png'
 
 const TimelinePage = () => {
-    const { call, text, video, setCall, setText, setVideo } = useContext(CheckInContext);
-    console.log(call)
+    const { call, text, video, setCall, setText, setVideo, timelineData } = useContext(CheckInContext);
+    // console.log(call.length, "Length")
 
     const handleSortByName = () => {
         const sortedCall = [...call].sort((a, b) => a.name.localeCompare(b.name))
@@ -28,9 +28,19 @@ const TimelinePage = () => {
         setVideo(sortedVideo)
     }
 
+    // No-Data when timeline empty Logic :
+    // Method 1 : Global State
+    
+    // Method 2 : Truthy, Falsy Logic
+    // const hasData = call.length || text.length || video.length;
+    //  0 || 1 || 0
+    // console.log(hasData, "hasData")
+
     return (
         <div className="py-20 container mx-auto">
             <h2 className=" text-3xl font-bold mb-5">Timeline</h2>
+
+            {/* {!hasData && <h2 className="text-black/60 text-3xl font-bold text-center py-20">There is no recent data!</h2> } */}
 
             {/* Sort Feature */}
             <div className="dropdown dropdown-bottom mb-10">
@@ -40,6 +50,8 @@ const TimelinePage = () => {
                     <li onClick={handleSortByDate} className="font-semibold bg-[#244D3F] rounded-lg text-white"><a>By Date ➡️ New-Old </a></li>
                 </ul>
             </div>
+
+            {timelineData.length === 0 && <h2 className="text-black/60 text-3xl font-bold text-center py-20">There is no recent data!</h2> }
 
             {/* Call Cards */}
             <div className="space-y-5">

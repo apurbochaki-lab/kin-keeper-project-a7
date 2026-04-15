@@ -1,6 +1,6 @@
-import Friend from "./Friend";
+import Friend from "@/components/Friends-Section/Friend";
 
-const Friends = async() => {
+const Friends = async () => {
     // const res = await fetch("http://localhost:3000/data.json", {
     //     cache: "no-store"
     // })

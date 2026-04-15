@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from '@/components/common-parts/Navbar/Navbar';
 import Footer from '@/components/common-parts/Footer';
 import CheckInProvider from '@/context/CheckInProvider';
+import { Flip, ToastContainer } from 'react-toastify';
 
 
 const geist = Geist({
@@ -27,6 +28,21 @@ export default function RootLayout({ children }) {
           {children}
         </CheckInProvider>
         <Footer></Footer>
+
+        {/* <ToastContainer position="top-center" /> */}
+        <ToastContainer
+          position="top-center"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+          transition={Flip}
+        />
       </body>
     </html>
   );

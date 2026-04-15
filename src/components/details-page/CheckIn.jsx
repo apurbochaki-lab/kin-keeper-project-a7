@@ -4,9 +4,10 @@ import { useContext } from "react";
 import { FiVideo } from "react-icons/fi";
 import { LuMessageSquareMore } from "react-icons/lu";
 import { PiPhoneCallBold } from "react-icons/pi";
+import { toast } from "react-toastify";
 
 const CheckIn = ({ name, id }) => {
-    const { call, text, video, setCall, setText, setVideo } = useContext(CheckInContext);
+    const { call, text, video, setCall, setText, setVideo, timelineData, setTimelineData } = useContext(CheckInContext);
 
     const handleCall = () => {
         // console.log("Call btn clicked")
@@ -14,7 +15,9 @@ const CheckIn = ({ name, id }) => {
         if (!isExist) {
             setCall([...call, { id, name, type: "Call", date: new Date() }]);
         }
-        console.log(call)
+        toast.success(`📞 Call to ${name}`)
+
+        setTimelineData([...timelineData, call])
     }
 
     const handleText = () => {
@@ -23,7 +26,9 @@ const CheckIn = ({ name, id }) => {
         if (!isExist) {
             setText([...text, { id, name, type: "Text", date: new Date() }]);
         }
-        console.log(text)
+        toast.success(`💬 Text to ${name}`)
+
+        setTimelineData([...timelineData, text])
     }
 
     const handleVideo = () => {
@@ -32,7 +37,9 @@ const CheckIn = ({ name, id }) => {
         if (!isExist) {
             setVideo([...video, { id, name, type: "Video", date: new Date() }]);
         }
-        console.log(video)
+        toast.success(`📹 Video to ${name}`)
+
+        setTimelineData([...timelineData, video])
     }
 
     return (
