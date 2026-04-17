@@ -30,11 +30,12 @@ const TimelinePage = () => {
 
     // No-Data when timeline empty Logic :
     // Method 1 : Global State
+    // call, text, video clicked = data state a add hobe. Lenth === 0 --> No-Data.
     
     // Method 2 : Truthy, Falsy Logic
     // const hasData = call.length || text.length || video.length;
-    //  0 || 1 || 0
-    // console.log(hasData, "hasData")
+    //  0 || 2 || 0
+    // falsy || truthy || falsy --> if return truthy value = Data ache. Jodi na thake, tahole 'No-Data' dekhabe.
 
     return (
         <div className="py-20 container mx-auto">
@@ -51,12 +52,13 @@ const TimelinePage = () => {
                 </ul>
             </div>
 
+            {/* No-Data logic */}
             {timelineData.length === 0 && <h2 className="text-black/60 text-3xl font-bold text-center py-20">There is no recent data!</h2> }
 
             {/* Call Cards */}
             <div className="space-y-5">
                 {
-                    call.map(c => <div key={c.id} className="flex items-center gap-3 bg-white p-5 rounded-lg shadow-sm">
+                    call.map((c, ind) => <div key={ind} className="flex items-center gap-3 bg-white p-5 rounded-lg shadow-sm">
                         <div className="shadow-sm p-3 rounded-xl">
                             <Image src={callImg} width={30} height={30} alt={c.name}></Image>
                         </div>
@@ -75,7 +77,7 @@ const TimelinePage = () => {
             {/* Text Cards */}
             <div className="mt-5 space-y-5">
                 {
-                    text.map(t => <div key={t.id} className="flex items-center gap-3 bg-white p-5 rounded-lg shadow-sm">
+                    text.map((t, ind) => <div key={ind} className="flex items-center gap-3 bg-white p-5 rounded-lg shadow-sm">
                         <div className="shadow-sm p-3 rounded-xl">
                             <Image src={textImg} width={30} height={30} alt={t.name}></Image>
                         </div>
@@ -94,7 +96,7 @@ const TimelinePage = () => {
             {/* Video Cards */}
             <div className="mt-5 space-y-5">
                 {
-                    video.map(v => <div key={v.id} className="flex items-center gap-3 bg-white p-5 rounded-lg shadow-sm">
+                    video.map((v, ind) => <div key={ind} className="flex items-center gap-3 bg-white p-5 rounded-lg shadow-sm">
                         <div className="shadow-sm p-3 rounded-xl">
                             <Image src={videoImg} width={30} height={30} alt={v.name}></Image>
                         </div>

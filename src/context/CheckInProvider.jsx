@@ -7,8 +7,8 @@ const CheckInProvider = ({ children }) => {
     const [text, setText] = useState([])
     const [video, setVideo] = useState([])
 
+    // State for timeline No-Data text
     const [timelineData, setTimelineData] = useState([])
-    console.log(timelineData.length)
 
     const data = {
         call,

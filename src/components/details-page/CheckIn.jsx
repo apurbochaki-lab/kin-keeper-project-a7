@@ -11,10 +11,7 @@ const CheckIn = ({ name, id }) => {
 
     const handleCall = () => {
         // console.log("Call btn clicked")
-        const isExist = call.find(c => c.id === id)
-        if (!isExist) {
-            setCall([...call, { id, name, type: "Call", date: new Date() }]);
-        }
+        setCall([...call, { id, name, type: "Call", date: new Date() }]);
         toast.success(`📞 Call to ${name}`)
 
         setTimelineData([...timelineData, call])
@@ -22,10 +19,7 @@ const CheckIn = ({ name, id }) => {
 
     const handleText = () => {
         // console.log("Text btn clicked")
-        const isExist = text.find(t => t.id === id)
-        if (!isExist) {
-            setText([...text, { id, name, type: "Text", date: new Date() }]);
-        }
+        setText([...text, { id, name, type: "Text", date: new Date() }]);
         toast.success(`💬 Text to ${name}`)
 
         setTimelineData([...timelineData, text])
@@ -33,10 +27,10 @@ const CheckIn = ({ name, id }) => {
 
     const handleVideo = () => {
         // console.log("Video btn clicked")
-        const isExist = video.find(v => v.id === id)
-        if (!isExist) {
-            setVideo([...video, { id, name, type: "Video", date: new Date() }]);
-        }
+        // const isExist = video.find(v => v.id === id)
+        // if (!isExist) {
+        setVideo([...video, { id, name, type: "Video", date: new Date() }]);
+        // }
         toast.success(`📹 Video to ${name}`)
 
         setTimelineData([...timelineData, video])

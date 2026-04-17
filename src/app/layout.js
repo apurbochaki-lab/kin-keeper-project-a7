@@ -1,6 +1,6 @@
 import { Geist } from 'next/font/google'
 import "./globals.css";
-import Navbar from '@/components/common-parts/Navbar/Navbar';
+import Navbar from '@/components/common-parts/Navbar';
 import Footer from '@/components/common-parts/Footer';
 import CheckInProvider from '@/context/CheckInProvider';
 import { Flip, ToastContainer } from 'react-toastify';

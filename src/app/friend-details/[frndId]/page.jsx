@@ -1,5 +1,6 @@
 import CheckIn from "@/components/details-page/CheckIn";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { RiArchiveLine, RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
 
 const page = async ({ params }) => {
@@ -14,7 +15,12 @@ const page = async ({ params }) => {
     // console.log(friendDetails)
 
     const details = friendDetails.find(detail => detail.id === Number(frndId))
-    const {id, picture, name, status, tags, days_since_contact, goal, next_due_date, position, type } = details;
+    // If can't found matched id --> details = undefined --> falsy value & object is truthy value --> (!details)
+    if (details === undefined) {
+        notFound()
+    }
+
+    const { id, picture, name, status, tags, days_since_contact, goal, next_due_date, position, type } = details;
     // console.log(details)
 
     return (
@@ -69,7 +75,7 @@ const page = async ({ params }) => {
                                         month: "short",
                                         day: "numeric",
                                         year: "numeric"
-                                    }) }</h2>
+                                    })}</h2>
                                 <h2 className=" text-[#64748B] text-xl">Next Due</h2>
                             </span>
                         </div>
